@@ -15,7 +15,7 @@ class_name = "RegistryDO"
 
 [[migrations]]
 tag = "v1"
-new_classes = ["RoomDO", "RegistryDO"]
+new_sqlite_classes = ["RoomDO", "RegistryDO"]
 
 [triggers]
 crons = ["*/10 * * * *"]
