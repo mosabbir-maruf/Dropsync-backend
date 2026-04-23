@@ -1,0 +1,22 @@
+name = "dropsync-backend"
+main = "src/worker.ts"
+compatibility_date = "2026-04-23"
+
+[observability]
+enabled = true
+
+[[durable_objects.bindings]]
+name = "ROOM_DO"
+class_name = "RoomDO"
+
+[[durable_objects.bindings]]
+name = "REGISTRY_DO"
+class_name = "RegistryDO"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["RoomDO", "RegistryDO"]
+
+[triggers]
+crons = ["*/10 * * * *"]
+
